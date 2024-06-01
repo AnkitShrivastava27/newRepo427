@@ -27,6 +27,10 @@ const ItemSchema = new mongoose.Schema({
 
 const Item = mongoose.model('Item', ItemSchema);
 
+app.get('/',(req,res)=>{
+    console.log("this is get method");
+
+})
 // Define a simple route to create an item
 app.post('/items', async (req, res) => {
   const newItem = new Item({
